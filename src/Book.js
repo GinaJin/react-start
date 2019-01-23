@@ -35,11 +35,30 @@ class Book extends Component {
         })
     }
 
+    changeBookReadStatus2 = (id) => {
+        const book = this.state.book
+        const index = book.books.findIndex(book => id === book.id)
+
+        const newBookState = Object.assign(
+            {}, 
+            book, 
+            {
+                books: [
+                    ...book.books.slice(0, index), 
+                    Object.assign({}, book.books[index], { isRead: !book.books[index].isRead}),
+                    ...book.books.slice(index+1)]
+            }
+        )
+
+        this.setState({
+            book: newBookState
+        })
+    }
+
     render() {
         const book = this.state.book
         return (
             <div>
-                
                 <ul>
                 {
                     book.books.map(book => {
