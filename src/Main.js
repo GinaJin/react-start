@@ -1,5 +1,17 @@
 import React, { Component } from 'react';
 
+class Books extends Component {
+	render() {
+		return (
+			<ul>
+                {
+                    this.props.books.map((book, index) => <li key={index}>{book}</li>)
+                }
+            </ul>
+		)
+	}
+}
+
 class Main extends Component {
     
     constructor(props) {
@@ -23,14 +35,11 @@ class Main extends Component {
 
     render() {
         const books = this.state.books
+		console.log(books)
         return (
             <div>
                 <button onClick={this.addBook}>添加</button>
-                <ul>
-                    {
-                        books.map((book, index) => <li key={index}>{book}</li>)
-                    }
-                </ul>
+				<Books books={books} />
             </div>
         )
     }
