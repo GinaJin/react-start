@@ -28,7 +28,7 @@ class Main extends Component {
                 <button onClick={this.addBook}>添加</button>
                 <ul>
                     {
-                        books.map(book => <li>{book}</li>)
+                        books.map((book, index) => <li key={index}>{book}</li>)
                     }
                 </ul>
             </div>
