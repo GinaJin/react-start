@@ -26,9 +26,9 @@ class Main extends Component {
 
     addBook = () => {
         this.setState(preState => {
-            preState.books.push('今日简史')
+            
             return {
-                books: preState.books
+                books: preState.books.concat(['今日简史'])
             }
         })
     }
