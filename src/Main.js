@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, PureComponent} from 'react';
 
-class Books extends Component {
+class Books extends PureComponent {
 	render() {
 		return (
 			<ul>
