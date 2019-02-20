@@ -10,7 +10,7 @@ class Book extends Component {
                 books: [
                     {
                         id: 0,
-                        name: '那么慢，那么美',
+                        name: '那么慢，那么美hahahahahhaha',
                         isRead: false
                     },
                     {
