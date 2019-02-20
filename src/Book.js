@@ -15,7 +15,7 @@ class Book extends Component {
                     },
                     {
                         id: 1,
-                        name: 'you dont know js 你不知道的javascript',
+                        name: 'you dont know js',
                         isRead: true
                     }
                 ]
